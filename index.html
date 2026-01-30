@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Link Button Example</title>
+</head>
+<body>
+
+    <!--
+        A standard button cannot directly use an href like an anchor tag.
+        We can use an anchor tag styled like a button or use JavaScript to
+        perform the redirection when the button is clicked.
+    -->
+
+    <!-- Option 1: An anchor tag styled to look like a button (Recommended for simple navigation) -->
+    <a href="https://www.google.com" style="display: inline-block; padding: 10px 20px; font-size: 16px; color: white; background-color: #007BFF; text-decoration: none; border-radius: 5px; border: 1px solid #0056b3; cursor: pointer;">
+        Go to Google.com (Anchor styled as button)
+    </a>
+
+    <!-- Option 2: A button element that uses JavaScript to redirect -->
+    <button onclick="window.location.href='https://www.google.com'" style="padding: 10px 20px; font-size: 16px; color: white; background-color: #28a745; border: none; border-radius: 5px; cursor: pointer; margin-left: 10px;">
+        Go to Google.com (Button with JavaScript)
+    </button>
+
+</body>
+</html>
