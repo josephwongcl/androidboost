@@ -1,25 +1,65 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Link Button Example</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mobile Friendly Links</title>
+    <style>
+        /* Basic styles for the body */
+        body {
+            font-family: sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f4;
+            text-align: center;
+        }
+
+        /* Container for the navigation links */
+        .nav-container {
+            display: flex;
+            flex-direction: column; /* Stacks links vertically by default */
+            gap: 15px; /* Adds space between links */
+            width: 100%;
+            max-width: 400px; /* Optional: keeps the container from getting too wide on large screens */
+            margin: 0 auto; /* Centers the container */
+        }
+
+        /* Styling for the links (making them look like buttons) */
+        .nav-link {
+            display: block; /* Makes the entire link area clickable */
+            padding: 15px;
+            background-color: #007BFF;
+            color: white;
+            text-decoration: none; /* Removes default underline */
+            border-radius: 5px;
+            font-size: 1.1em;
+            transition: background-color 0.3s;
+        }
+
+        .nav-link:hover {
+            background-color: #0056b3;
+        }
+
+        /* Media query for larger screens (e.g., tablets, desktops) */
+        @media (min-width: 600px) {
+            .nav-container {
+                flex-direction: row; /* Lays links horizontally on wider screens */
+                justify-content: center;
+                max-width: 600px;
+            }
+        }
+    </style>
 </head>
 <body>
 
-    <!--
-        A standard button cannot directly use an href like an anchor tag.
-        We can use an anchor tag styled like a button or use JavaScript to
-        perform the redirection when the button is clicked.
-    -->
+    <h1>Welcome</h1>
+    <p>Tap a link to navigate:</p>
 
-    <!-- Option 1: An anchor tag styled to look like a button (Recommended for simple navigation) -->
-    <a href="https://www.google.com" style="display: inline-block; padding: 10px 20px; font-size: 16px; color: white; background-color: #007BFF; text-decoration: none; border-radius: 5px; border: 1px solid #0056b3; cursor: pointer;">
-        Go to Google.com (Anchor styled as button)
-    </a>
-
-    <!-- Option 2: A button element that uses JavaScript to redirect -->
-    <button onclick="window.location.href='https://www.google.com'" style="padding: 10px 20px; font-size: 16px; color: white; background-color: #28a745; border: none; border-radius: 5px; cursor: pointer; margin-left: 10px;">
-        Go to Google.com (Button with JavaScript)
-    </button>
+    <nav class="nav-container">
+        <a href="https://pinterest.com" class="nav-link">Pinterest 1</a>
+        <a href="https://pinterest.com/about" class="nav-link">Pinterest 2</a>
+        <a href="pinterest://" class="nav-link">Pinterest 3</a>
+    </nav>
 
 </body>
 </html>
